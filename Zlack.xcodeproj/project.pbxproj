@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C13FCCBD30968C8B09E374E4 /* Pods_Zlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */; };
+		F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94B26EA22F1026F002756FA /* SWRevealViewController.m */; };
 		F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */; };
 		F966C84F22F07F5C001D5BF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F966C84E22F07F5C001D5BF4 /* ViewController.swift */; };
 		F966C85222F07F5C001D5BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F966C85022F07F5C001D5BF4 /* Main.storyboard */; };
@@ -15,6 +17,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		218D28F794DB22CA5C22AF4D /* Pods-Zlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zlack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zlack/Pods-Zlack.release.xcconfig"; sourceTree = "<group>"; };
+		42BAF68D935F54C6EF005C48 /* Pods-Zlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zlack/Pods-Zlack.debug.xcconfig"; sourceTree = "<group>"; };
+		BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F94B26E822F1026E002756FA /* Zlack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zlack-Bridging-Header.h"; sourceTree = "<group>"; };
+		F94B26E922F1026F002756FA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
+		F94B26EA22F1026F002756FA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F966C84922F07F5C001D5BF4 /* Zlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F966C84E22F07F5C001D5BF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,17 +37,48 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C13FCCBD30968C8B09E374E4 /* Pods_Zlack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3CBEBCA5AD2F67E9117FF823 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				42BAF68D935F54C6EF005C48 /* Pods-Zlack.debug.xcconfig */,
+				218D28F794DB22CA5C22AF4D /* Pods-Zlack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BB9151E19B098D26FFF0864C /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F94B26E722F10242002756FA /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				F94B26E922F1026F002756FA /* SWRevealViewController.h */,
+				F94B26EA22F1026F002756FA /* SWRevealViewController.m */,
+				F94B26E822F1026E002756FA /* Zlack-Bridging-Header.h */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		F966C84022F07F5B001D5BF4 = {
 			isa = PBXGroup;
 			children = (
+				F94B26E722F10242002756FA /* Supporting Files */,
 				F966C84B22F07F5C001D5BF4 /* Zlack */,
 				F966C84A22F07F5C001D5BF4 /* Products */,
+				3CBEBCA5AD2F67E9117FF823 /* Pods */,
+				BB9151E19B098D26FFF0864C /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -71,9 +110,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F966C85B22F07F5C001D5BF4 /* Build configuration list for PBXNativeTarget "Zlack" */;
 			buildPhases = (
+				58A3870FA41E6548CEA65FFC /* [CP] Check Pods Manifest.lock */,
 				F966C84522F07F5B001D5BF4 /* Sources */,
 				F966C84622F07F5B001D5BF4 /* Frameworks */,
 				F966C84722F07F5B001D5BF4 /* Resources */,
+				B6A88DF4C00FFCCF75950820 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -96,6 +137,7 @@
 				TargetAttributes = {
 					F966C84822F07F5B001D5BF4 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -131,6 +173,51 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		58A3870FA41E6548CEA65FFC /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Zlack-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		B6A88DF4C00FFCCF75950820 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-Zlack/Pods-Zlack-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
+				"${BUILT_PRODUCTS_DIR}/Socket.IO-Client-Swift/SocketIO.framework",
+				"${BUILT_PRODUCTS_DIR}/Starscream/Starscream.framework",
+				"${BUILT_PRODUCTS_DIR}/SwiftyJSON/SwiftyJSON.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SocketIO.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Starscream.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftyJSON.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Zlack/Pods-Zlack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		F966C84522F07F5B001D5BF4 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -138,6 +225,7 @@
 			files = (
 				F966C84F22F07F5C001D5BF4 /* ViewController.swift in Sources */,
 				F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */,
+				F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,14 +360,18 @@
 		};
 		F966C85C22F07F5C001D5BF4 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 42BAF68D935F54C6EF005C48 /* Pods-Zlack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66862TVG3Q;
 				INFOPLIST_FILE = Zlack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitelichan.Zlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/Zlack-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,14 +379,17 @@
 		};
 		F966C85D22F07F5C001D5BF4 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 218D28F794DB22CA5C22AF4D /* Pods-Zlack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 66862TVG3Q;
 				INFOPLIST_FILE = Zlack/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitelichan.Zlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/Zlack-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

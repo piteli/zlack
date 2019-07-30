@@ -1,0 +1,6 @@
+framework module Pods_Zlack {
+  umbrella header "Pods-Zlack-umbrella.h"
+
+  export *
+  module * { export * }
+}
