@@ -1,24 +1,103 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--ChannelVC-->
+        <scene sceneID="EDk-FS-Ddt">
+            <objects>
+                <viewController id="C2v-dL-rs7" customClass="ChannelVC" customModule="Zlack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5xx-z3-pto">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <viewLayoutGuide key="safeArea" id="fcF-of-q09"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="pgk-Kl-Juv" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1790" y="-147"/>
+        </scene>
+        <!--Reveal View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="SWRevealViewController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <segue destination="C2v-dL-rs7" kind="custom" identifier="sw_rear" customClass="SWRevealViewControllerSegueSetController" id="eyU-GP-ueb"/>
+                        <segue destination="rTP-SB-aiS" kind="custom" identifier="sw_front" customClass="SWRevealViewControllerSegueSetController" id="O8L-6Z-bNs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
         </scene>
+        <!--ChatVC-->
+        <scene sceneID="Cl1-cX-MXt">
+            <objects>
+                <viewController id="rTP-SB-aiS" customClass="ChatVC" customModule="Zlack" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="kWe-iD-Pyb">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HkJ-aO-Min">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="77"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Zlack" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kZD-vi-Mdb">
+                                        <rect key="frame" x="166" y="39" width="42" height="18"/>
+                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="bottom" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pf8-E4-k1e">
+                                        <rect key="frame" x="8" y="39" width="31" height="26"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="18" id="FoA-Sx-mBU"/>
+                                            <constraint firstAttribute="width" constant="20" id="aEG-Pi-PTi"/>
+                                        </constraints>
+                                        <state key="normal" image="smackBurger"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.60000002384185791" green="0.40000000596046448" blue="0.20000000298023224" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="77" id="9r8-t9-EWH"/>
+                                    <constraint firstItem="Pf8-E4-k1e" firstAttribute="bottom" secondItem="kZD-vi-Mdb" secondAttribute="bottom" id="Ai7-KY-0yT"/>
+                                    <constraint firstItem="Pf8-E4-k1e" firstAttribute="leading" secondItem="HkJ-aO-Min" secondAttribute="leading" constant="12" id="I1t-GO-Ihn"/>
+                                    <constraint firstItem="kZD-vi-Mdb" firstAttribute="centerY" secondItem="Pf8-E4-k1e" secondAttribute="centerY" id="NtH-ek-RVS"/>
+                                    <constraint firstItem="kZD-vi-Mdb" firstAttribute="centerX" secondItem="HkJ-aO-Min" secondAttribute="centerX" id="k2q-WK-gVw"/>
+                                    <constraint firstItem="Pf8-E4-k1e" firstAttribute="top" secondItem="HkJ-aO-Min" secondAttribute="top" constant="39" id="w4v-tT-s7f"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="HkJ-aO-Min" firstAttribute="trailing" secondItem="eCl-no-FVT" secondAttribute="trailing" id="XJ9-UK-YRb"/>
+                            <constraint firstItem="HkJ-aO-Min" firstAttribute="top" secondItem="kWe-iD-Pyb" secondAttribute="top" id="eX6-Es-WTQ"/>
+                            <constraint firstItem="HkJ-aO-Min" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" id="xeh-Rz-PF6"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eCl-no-FVT"/>
+                    </view>
+                    <connections>
+                        <outlet property="menuBtn" destination="Pf8-E4-k1e" id="zt8-aF-ZUW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rhF-Jj-A1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1789.5999999999999" y="803.74812593703155"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="smackBurger" width="40" height="40"/>
+    </resources>
 </document>

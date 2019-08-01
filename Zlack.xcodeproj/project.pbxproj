@@ -10,10 +10,11 @@
 		C13FCCBD30968C8B09E374E4 /* Pods_Zlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */; };
 		F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94B26EA22F1026F002756FA /* SWRevealViewController.m */; };
 		F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */; };
-		F966C84F22F07F5C001D5BF4 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F966C84E22F07F5C001D5BF4 /* ViewController.swift */; };
 		F966C85222F07F5C001D5BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F966C85022F07F5C001D5BF4 /* Main.storyboard */; };
 		F966C85422F07F5C001D5BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F966C85322F07F5C001D5BF4 /* Assets.xcassets */; };
 		F966C85722F07F5C001D5BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F966C85522F07F5C001D5BF4 /* LaunchScreen.storyboard */; };
+		F9C3D93222F344C5004A1532 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C3D93122F344C5004A1532 /* ChatVC.swift */; };
+		F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C3D93322F344D9004A1532 /* ChannelVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,11 +26,12 @@
 		F94B26EA22F1026F002756FA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F966C84922F07F5C001D5BF4 /* Zlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		F966C84E22F07F5C001D5BF4 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		F966C85122F07F5C001D5BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		F966C85322F07F5C001D5BF4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F966C85622F07F5C001D5BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F966C85822F07F5C001D5BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F9C3D93122F344C5004A1532 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
+		F9C3D93322F344D9004A1532 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,14 +95,39 @@
 		F966C84B22F07F5C001D5BF4 /* Zlack */ = {
 			isa = PBXGroup;
 			children = (
+				F9C3D92C22F34164004A1532 /* Model */,
+				F9C3D92B22F3415F004A1532 /* View */,
+				F9C3D92A22F34159004A1532 /* Controller */,
 				F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */,
-				F966C84E22F07F5C001D5BF4 /* ViewController.swift */,
 				F966C85022F07F5C001D5BF4 /* Main.storyboard */,
 				F966C85322F07F5C001D5BF4 /* Assets.xcassets */,
 				F966C85522F07F5C001D5BF4 /* LaunchScreen.storyboard */,
 				F966C85822F07F5C001D5BF4 /* Info.plist */,
 			);
 			path = Zlack;
+			sourceTree = "<group>";
+		};
+		F9C3D92A22F34159004A1532 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F9C3D93122F344C5004A1532 /* ChatVC.swift */,
+				F9C3D93322F344D9004A1532 /* ChannelVC.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F9C3D92B22F3415F004A1532 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F9C3D92C22F34164004A1532 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -223,7 +250,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F966C84F22F07F5C001D5BF4 /* ViewController.swift in Sources */,
+				F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */,
+				F9C3D93222F344C5004A1532 /* ChatVC.swift in Sources */,
 				F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */,
 				F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */,
 			);
