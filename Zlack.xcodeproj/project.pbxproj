@@ -14,6 +14,8 @@
 		F966C85422F07F5C001D5BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F966C85322F07F5C001D5BF4 /* Assets.xcassets */; };
 		F966C85722F07F5C001D5BF4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F966C85522F07F5C001D5BF4 /* LaunchScreen.storyboard */; };
 		F96EF6A322F50CA600AAFBA6 /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F96EF6A222F50CA600AAFBA6 /* GradientView.swift */; };
+		F9A05A9D22F570FF00EC85D7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A05A9C22F570FF00EC85D7 /* Constants.swift */; };
+		F9A35A8022F92A1600841834 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9A35A7F22F92A1600841834 /* LoginVC.swift */; };
 		F9C3D93222F344C5004A1532 /* ChatVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C3D93122F344C5004A1532 /* ChatVC.swift */; };
 		F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9C3D93322F344D9004A1532 /* ChannelVC.swift */; };
 /* End PBXBuildFile section */
@@ -32,6 +34,8 @@
 		F966C85622F07F5C001D5BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F966C85822F07F5C001D5BF4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F96EF6A222F50CA600AAFBA6 /* GradientView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		F9A05A9C22F570FF00EC85D7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		F9A35A7F22F92A1600841834 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
 		F9C3D93122F344C5004A1532 /* ChatVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVC.swift; sourceTree = "<group>"; };
 		F9C3D93322F344D9004A1532 /* ChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -97,6 +101,7 @@
 		F966C84B22F07F5C001D5BF4 /* Zlack */ = {
 			isa = PBXGroup;
 			children = (
+				F9A05A9B22F5709500EC85D7 /* Utilities */,
 				F9C3D92C22F34164004A1532 /* Model */,
 				F9C3D92B22F3415F004A1532 /* View */,
 				F9C3D92A22F34159004A1532 /* Controller */,
@@ -109,11 +114,21 @@
 			path = Zlack;
 			sourceTree = "<group>";
 		};
+		F9A05A9B22F5709500EC85D7 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F9A05A9C22F570FF00EC85D7 /* Constants.swift */,
+			);
+			name = Utilities;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		F9C3D92A22F34159004A1532 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
 				F9C3D93122F344C5004A1532 /* ChatVC.swift */,
 				F9C3D93322F344D9004A1532 /* ChannelVC.swift */,
+				F9A35A7F22F92A1600841834 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -255,9 +270,11 @@
 			files = (
 				F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */,
 				F9C3D93222F344C5004A1532 /* ChatVC.swift in Sources */,
+				F9A35A8022F92A1600841834 /* LoginVC.swift in Sources */,
 				F96EF6A322F50CA600AAFBA6 /* GradientView.swift in Sources */,
 				F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */,
 				F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */,
+				F9A05A9D22F570FF00EC85D7 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
