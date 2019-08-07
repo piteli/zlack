@@ -18,7 +18,7 @@ class ChannelVC: UIViewController {
     
     @IBAction func loginBtnPressed(_ sender: Any) {
         self.revealViewController().revealToggle(self)
-        performSegue(withIdentifier: TO_LOGIN, sender: nil)
+        performSegue(withIdentifier: "toLogin", sender: nil)
     }
     
 }
