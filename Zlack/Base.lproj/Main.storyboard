@@ -206,10 +206,10 @@
             </objects>
             <point key="canvasLocation" x="2580" y="-149.77511244377811"/>
         </scene>
-        <!--View Controller-->
+        <!--Create AccountVC-->
         <scene sceneID="1pl-lx-aci">
             <objects>
-                <viewController id="9hd-RY-yDH" sceneMemberID="viewController">
+                <viewController id="9hd-RY-yDH" customClass="CreateAccountVC" customModule="Zlack" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="TKg-uQ-Ip6">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -242,6 +242,7 @@
                                 <rect key="frame" x="331" y="20" width="28" height="28"/>
                                 <state key="normal" backgroundImage="closeButton"/>
                                 <connections>
+                                    <action selector="closePressed:" destination="9hd-RY-yDH" eventType="touchUpInside" id="tc0-8A-gKq"/>
                                     <action selector="closePressed:" destination="Mk0-Yt-6OT" eventType="touchUpInside" id="u1b-Pf-T2y"/>
                                 </connections>
                             </button>
@@ -304,8 +305,12 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="qVj-3g-9df"/>
                     </view>
+                    <connections>
+                        <segue destination="6Zt-4p-hg8" kind="unwind" identifier="unwindToChannel" unwindAction="prepareforUnwindWithSegue:" id="Oli-JF-4t2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4b8-xF-NVu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="6Zt-4p-hg8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3322.4000000000001" y="-149.77511244377811"/>
         </scene>
