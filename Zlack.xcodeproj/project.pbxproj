@@ -8,7 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		C13FCCBD30968C8B09E374E4 /* Pods_Zlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */; };
+		F946CEA42303F86700498E45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946CEA32303F86700498E45 /* Constants.swift */; };
 		F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94B26EA22F1026F002756FA /* SWRevealViewController.m */; };
+		F950B0782303ED1B00267EC7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950B0772303ED1B00267EC7 /* AuthService.swift */; };
 		F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */; };
 		F966C85222F07F5C001D5BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F966C85022F07F5C001D5BF4 /* Main.storyboard */; };
 		F966C85422F07F5C001D5BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F966C85322F07F5C001D5BF4 /* Assets.xcassets */; };
@@ -24,9 +26,11 @@
 		218D28F794DB22CA5C22AF4D /* Pods-Zlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zlack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zlack/Pods-Zlack.release.xcconfig"; sourceTree = "<group>"; };
 		42BAF68D935F54C6EF005C48 /* Pods-Zlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zlack/Pods-Zlack.debug.xcconfig"; sourceTree = "<group>"; };
 		BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		F946CEA32303F86700498E45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F94B26E822F1026E002756FA /* Zlack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zlack-Bridging-Header.h"; sourceTree = "<group>"; };
 		F94B26E922F1026F002756FA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F94B26EA22F1026F002756FA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
+		F950B0772303ED1B00267EC7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
 		F966C84922F07F5C001D5BF4 /* Zlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F966C85122F07F5C001D5BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -69,6 +73,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F946CEA22303F85200498E45 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				F946CEA32303F86700498E45 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		F94B26E722F10242002756FA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
@@ -79,10 +91,17 @@
 			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		F950B0762303ECF200267EC7 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				F950B0772303ED1B00267EC7 /* AuthService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
 		F966C84022F07F5B001D5BF4 = {
 			isa = PBXGroup;
 			children = (
-				F94B26E722F10242002756FA /* Supporting Files */,
 				F966C84B22F07F5C001D5BF4 /* Zlack */,
 				F966C84A22F07F5C001D5BF4 /* Products */,
 				3CBEBCA5AD2F67E9117FF823 /* Pods */,
@@ -101,6 +120,9 @@
 		F966C84B22F07F5C001D5BF4 /* Zlack */ = {
 			isa = PBXGroup;
 			children = (
+				F946CEA22303F85200498E45 /* Utilities */,
+				F94B26E722F10242002756FA /* Supporting Files */,
+				F950B0762303ECF200267EC7 /* Services */,
 				F9C3D92C22F34164004A1532 /* Model */,
 				F9C3D92B22F3415F004A1532 /* View */,
 				F9C3D92A22F34159004A1532 /* Controller */,
@@ -266,6 +288,8 @@
 				F96EF6A322F50CA600AAFBA6 /* GradientView.swift in Sources */,
 				F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */,
 				F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */,
+				F950B0782303ED1B00267EC7 /* AuthService.swift in Sources */,
+				F946CEA42303F86700498E45 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
