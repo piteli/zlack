@@ -121,13 +121,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VM3-pF-QkV">
-                                <rect key="frame" x="67" y="311" width="240" height="17"/>
+                                <rect key="frame" x="67" y="311" width="240" height="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzu-mR-clu">
-                                <rect key="frame" x="96" y="379" width="183" height="30"/>
+                                <rect key="frame" x="96" y="388" width="183" height="30"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ETG-ZL-XUX"/>
@@ -145,7 +145,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3S-5J-UDo">
-                                <rect key="frame" x="67" y="338" width="240" height="1"/>
+                                <rect key="frame" x="67" y="347" width="240" height="1"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7vV-qT-4rx"/>
@@ -159,7 +159,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Enr-R8-Hx3">
-                                <rect key="frame" x="78.5" y="423" width="218" height="28"/>
+                                <rect key="frame" x="78.5" y="432" width="218" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Don't have a account? Sign up here!"/>
                                 <connections>
@@ -260,6 +260,9 @@
                                 <rect key="frame" x="132" y="366" width="111" height="134"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Choose Avatar"/>
+                                <connections>
+                                    <action selector="pickAvatarPressed:" destination="9hd-RY-yDH" eventType="touchUpInside" id="LT5-DW-JX2"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Cbs-5e-C4r">
                                 <rect key="frame" x="78" y="508" width="218" height="28"/>
@@ -267,10 +270,11 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Generate Background Color"/>
                                 <connections>
+                                    <action selector="pickBGColorPressed:" destination="9hd-RY-yDH" eventType="touchUpInside" id="mrn-vr-6Gu"/>
                                     <action selector="signupBtnPressed:" destination="Mk0-Yt-6OT" eventType="touchUpInside" id="iQ2-ZE-FVW"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-Jx-OMj">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eFj-Jx-OMj" customClass="RoundedButton" customModule="Zlack" customModuleProvider="target">
                                 <rect key="frame" x="96" y="614" width="183" height="33"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
@@ -280,6 +284,9 @@
                                 <state key="normal" title="Register">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="createAccountPressed:" destination="9hd-RY-yDH" eventType="touchUpInside" id="CBM-yx-M4u"/>
+                                </connections>
                             </button>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="E3G-ZK-keb">
                                 <rect key="frame" x="71" y="183" width="240" height="1"/>
@@ -306,6 +313,10 @@
                         <viewLayoutGuide key="safeArea" id="qVj-3g-9df"/>
                     </view>
                     <connections>
+                        <outlet property="email_txt" destination="iRV-9y-uqK" id="D2Y-I5-Lcf"/>
+                        <outlet property="password_txt" destination="WfV-ED-v0Z" id="ncP-ad-60x"/>
+                        <outlet property="user_img" destination="T87-1X-m3h" id="qT8-ns-hll"/>
+                        <outlet property="username_txt" destination="jsu-ky-4eT" id="Dpd-Ga-nno"/>
                         <segue destination="6Zt-4p-hg8" kind="unwind" identifier="unwindToChannel" unwindAction="prepareforUnwindWithSegue:" id="Oli-JF-4t2"/>
                     </connections>
                 </viewController>
