@@ -11,6 +11,7 @@
 		F946CEA42303F86700498E45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946CEA32303F86700498E45 /* Constants.swift */; };
 		F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94B26EA22F1026F002756FA /* SWRevealViewController.m */; };
 		F950B0782303ED1B00267EC7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950B0772303ED1B00267EC7 /* AuthService.swift */; };
+		F9641FE92308FC55006FF1DB /* UserDataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9641FE82308FC55006FF1DB /* UserDataService.swift */; };
 		F966C84D22F07F5C001D5BF4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */; };
 		F966C85222F07F5C001D5BF4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F966C85022F07F5C001D5BF4 /* Main.storyboard */; };
 		F966C85422F07F5C001D5BF4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F966C85322F07F5C001D5BF4 /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 		F94B26E922F1026F002756FA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
 		F94B26EA22F1026F002756FA /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SWRevealViewController.m; sourceTree = "<group>"; };
 		F950B0772303ED1B00267EC7 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		F9641FE82308FC55006FF1DB /* UserDataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDataService.swift; sourceTree = "<group>"; };
 		F966C84922F07F5C001D5BF4 /* Zlack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Zlack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F966C84C22F07F5C001D5BF4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F966C85122F07F5C001D5BF4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 			isa = PBXGroup;
 			children = (
 				F950B0772303ED1B00267EC7 /* AuthService.swift */,
+				F9641FE82308FC55006FF1DB /* UserDataService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -287,6 +290,7 @@
 				F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */,
 				F99053822305B5710007CE81 /* RoundedButton.swift in Sources */,
 				F9C3D93222F344C5004A1532 /* ChatVC.swift in Sources */,
+				F9641FE92308FC55006FF1DB /* UserDataService.swift in Sources */,
 				F98BA50822F9BC1D00D34C57 /* CreateAccountVC.swift in Sources */,
 				F9A35A8022F92A1600841834 /* LoginVC.swift in Sources */,
 				F96EF6A322F50CA600AAFBA6 /* GradientView.swift in Sources */,
