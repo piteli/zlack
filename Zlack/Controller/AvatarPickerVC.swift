@@ -23,7 +23,7 @@ class AvatarPickerVCViewController: UIViewController, UICollectionViewDelegate, 
         // Do any additional setup after loading the view.
     }
     
-    func collectionView(_ collectionView: UICollectionView, callForItemAtIndexPath : IndexPath) -> UICollectionViewCell {
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "avatarCell", for: indexPath) as? AvatarCell {
             cell.configureCell(index : indexPath.item, type : avatarType)
             return cell
@@ -56,7 +56,7 @@ class AvatarPickerVCViewController: UIViewController, UICollectionViewDelegate, 
         }
         let spaceBetweenCells : CGFloat = 10
         let padding : CGFloat = 40
-        let cellDimension = ((collection.bounds.width - padding) - (numberOfColumns - 1) * spaceBetweenCells) / numberOfColumn
+        let cellDimension = ((collectionView.bounds.width - padding) - (numberOfColumn - 1) * spaceBetweenCells) / numberOfColumn
         return CGSize(width : cellDimension, height : cellDimension)
     }
     

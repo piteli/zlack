@@ -19,6 +19,7 @@ class CreateAccountVC: UIViewController {
     //variables default
     var avatarName = ""
     var avatarColor = "[0.5, 0.5, 0.5, 1]"
+    var bgColor : UIColor?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,8 +29,11 @@ class CreateAccountVC: UIViewController {
     
     override func viewDidAppear(_ animated: Bool) {
         if UserDataService.instance.avatarName != "" {
-            userImg.image = UIImage(named : UserDataService.instance.avatarName)
+            user_img.image = UIImage(named : UserDataService.instance.avatarName)
             avatarName = UserDataService.instance.avatarName
+            if avatarName.contains("light") && bgColor == nil {
+                user_img.backgroundColor = UIColor.lightGray
+            }
         }
     }
 
@@ -38,16 +42,16 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
-        guard let name = username_txt, username_txt.text != "" else {return}
+        guard let name = username_txt.text, username_txt.text != "" else {return}
         guard let email = email_txt.text, email_txt.text != "" else {return}
-        guard let pass = pass_txt.text, pass_txt.text != "" else {return}
+        guard let pass = password_txt.text, password_txt.text != "" else {return}
         AuthService.instance.registerUser(email: email, password: pass){(success) in
             
             if(success){
                 AuthService.instance.loginUser(email : email, password : pass, completion : {
                     (success) in
                     if success {
-                        AuthService.instance.createUser(name : name, email : email, avatarName : self.avatarName, avatarColor : self.avatarColor, completion : {
+                        UserDataService.instance.createUser(name : name, email : email, avatarName : self.avatarName, avatarColor : self.avatarColor, completion : {
                             (success) in
                             if success {
                             print(UserDataService.instance.name,UserDataService.instance.avatarName)
@@ -64,5 +68,10 @@ class CreateAccountVC: UIViewController {
         performSegue(withIdentifier: TO_AVATAR_PICKER, sender: nil)
     }
     @IBAction func pickBGColorPressed(_ sender: Any) {
+        let r = CGFloat(arc4random_uniform(255) / 255)
+        let g = CGFloat(arc4random_uniform(255) / 255)
+        let b = CGFloat(arc4random_uniform(255) / 255)
+        bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        self.user_img.backgroundColor = bgColor
     }
 }

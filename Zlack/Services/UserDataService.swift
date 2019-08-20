@@ -7,7 +7,9 @@
 //
 
 import Foundation
-
+import Alamofire
+import SwiftyJSON
+ 
  class UserDataService {
     static let instance = UserDataService()
     
@@ -45,18 +47,18 @@ import Foundation
             "Content-Type" : "application/json; charset=utf-8"
         ]
         
-        AlamoFire.request(URL_USER_ADD, method : .post, parameters : body, encoding : JSONEncoding.default, headers : body).responseJSON{ (response) in
+        Alamofire.request(URL_USER_ADD, method : .post, parameters : body, encoding : JSONEncoding.default, headers : headers).responseJSON{ (response) in
             
             if response.result.error == nil{
                 guard let data = response.data else {return}
-                let json = JSON(data : data)
+                let json = try! JSON(data : data)
                 let id = json["_id"].stringValue
                 let color = json["avatarColor"].stringValue
                 let avatarName = json["avatarName"].stringValue
                 let email = json["email"].stringValue
                 let name = json["name"].stringValue
                 
-                UserDataService.instance.setUserData(id : id, color : color, avatarName : avatarName, email : email, name : name)
+                UserDataService.instance.setUserData(id : id, color : color, avatarName : avatarName, avatarColor: color, email : email, name : name)
                 completion(true)
             }else{
                 completion(false)

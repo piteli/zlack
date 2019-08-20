@@ -10,6 +10,7 @@
 		C13FCCBD30968C8B09E374E4 /* Pods_Zlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */; };
 		F9025196230915750090FD9D /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9025195230915750090FD9D /* AvatarPickerVC.swift */; };
 		F9025198230918550090FD9D /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9025197230918550090FD9D /* AvatarCell.swift */; };
+		F9444872230BFA3D00E14063 /* CircleImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9444871230BFA3D00E14063 /* CircleImage.swift */; };
 		F946CEA42303F86700498E45 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = F946CEA32303F86700498E45 /* Constants.swift */; };
 		F94B26EB22F1026F002756FA /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F94B26EA22F1026F002756FA /* SWRevealViewController.m */; };
 		F950B0782303ED1B00267EC7 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = F950B0772303ED1B00267EC7 /* AuthService.swift */; };
@@ -32,6 +33,7 @@
 		BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9025195230915750090FD9D /* AvatarPickerVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarPickerVC.swift; sourceTree = "<group>"; };
 		F9025197230918550090FD9D /* AvatarCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarCell.swift; sourceTree = "<group>"; };
+		F9444871230BFA3D00E14063 /* CircleImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleImage.swift; sourceTree = "<group>"; };
 		F946CEA32303F86700498E45 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		F94B26E822F1026E002756FA /* Zlack-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Zlack-Bridging-Header.h"; sourceTree = "<group>"; };
 		F94B26E922F1026F002756FA /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SWRevealViewController.h; sourceTree = "<group>"; };
@@ -162,6 +164,7 @@
 				F96EF6A222F50CA600AAFBA6 /* GradientView.swift */,
 				F99053812305B5710007CE81 /* RoundedButton.swift */,
 				F9025197230918550090FD9D /* AvatarCell.swift */,
+				F9444871230BFA3D00E14063 /* CircleImage.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -296,6 +299,7 @@
 				F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */,
 				F99053822305B5710007CE81 /* RoundedButton.swift in Sources */,
 				F9025196230915750090FD9D /* AvatarPickerVC.swift in Sources */,
+				F9444872230BFA3D00E14063 /* CircleImage.swift in Sources */,
 				F9C3D93222F344C5004A1532 /* ChatVC.swift in Sources */,
 				F9641FE92308FC55006FF1DB /* UserDataService.swift in Sources */,
 				F98BA50822F9BC1D00D34C57 /* CreateAccountVC.swift in Sources */,
@@ -450,7 +454,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitelichan.Zlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/Zlack-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zlack/Supporting Files/Zlack-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -469,7 +473,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.pitelichan.Zlack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_OBJC_BRIDGING_HEADER = "Supporting Files/Zlack-Bridging-Header.h";
+				SWIFT_OBJC_BRIDGING_HEADER = "Zlack/Supporting Files/Zlack-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
