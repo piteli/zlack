@@ -15,6 +15,7 @@ class CreateAccountVC: UIViewController {
     @IBOutlet weak var username_txt: UITextField!
     @IBOutlet weak var password_txt: UITextField!
     @IBOutlet weak var user_img: UIImageView!
+    @IBOutlet weak var spinner: UIActivityIndicatorView!
     
     //variables default
     var avatarName = ""
@@ -42,6 +43,8 @@ class CreateAccountVC: UIViewController {
     }
     
     @IBAction func createAccountPressed(_ sender: Any) {
+        spinner.isHidden = false
+        spinner.startAnimating()
         guard let name = username_txt.text, username_txt.text != "" else {return}
         guard let email = email_txt.text, email_txt.text != "" else {return}
         guard let pass = password_txt.text, password_txt.text != "" else {return}
@@ -55,7 +58,10 @@ class CreateAccountVC: UIViewController {
                             (success) in
                             if success {
                             print(UserDataService.instance.name,UserDataService.instance.avatarName)
+                                self.spinner.isHidden = true
+                                self.spinner.stopAnimating()
                             self.performSegue(withIdentifier: UNWIND, sender: nil)
+                                NotificationCenter.default.post(name : NOTIF_USER_DATA_DID_CHANGE, object : nil)
                             }
                         })
                     }
@@ -72,6 +78,22 @@ class CreateAccountVC: UIViewController {
         let g = CGFloat(arc4random_uniform(255) / 255)
         let b = CGFloat(arc4random_uniform(255) / 255)
         bgColor = UIColor(red: r, green: g, blue: b, alpha: 1)
+        UIView.animate(withDuration: 0.2) {
+            self.user_img.backgroundColor = self.bgColor
+        }
         self.user_img.backgroundColor = bgColor
+    }
+    
+    func setupView(){
+        spinner.isHidden = true
+        username_txt.attributedText  = NSAttributedString(string : "username", attributes : [NSAttributedStringKey.foregroundColor : zlackPurplePlaceHolder])
+        email_txt.attributedText  = NSAttributedString(string : "email", attributes : [NSAttributedStringKey.foregroundColor : zlackPurplePlaceHolder])
+        password_txt.attributedText  = NSAttributedString(string : "password", attributes : [NSAttributedStringKey.foregroundColor : zlackPurplePlaceHolder])
+        let tap = UITapGestureRecognizer(target : self, action : #selector(CreateAccountVC.handleTap))
+        view.addGestureRecognizer(tap)
+    }
+    
+    @objc func handleTap(){
+        view.endEditing(true)
     }
 }
