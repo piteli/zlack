@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileVC" customModule="Zlack" customModuleProvider="target">
+            <connections>
+                <outlet property="bgView" destination="fkq-5h-CcJ" id="QPu-a6-2TD"/>
+                <outlet property="profileImg" destination="zxz-YJ-IXR" id="4gX-qf-Abd"/>
+                <outlet property="userEmail" destination="ium-IM-K2Q" id="a3C-1G-eWB"/>
+                <outlet property="userName" destination="XPp-AS-9uO" id="FSs-8J-FYU"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fkq-5h-CcJ" userLabel="bgView">
+                    <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.4002530809859155" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4Ho-AM-ntL">
+                    <rect key="frame" x="20" y="173.5" width="335" height="320"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7cz-hi-MeU">
+                            <rect key="frame" x="299" y="8" width="28" height="28"/>
+                            <state key="normal" backgroundImage="closeButton"/>
+                            <connections>
+                                <action selector="closedModalPressed:" destination="-1" eventType="touchUpInside" id="Yzz-df-Ymz"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zFi-2H-Gg1">
+                            <rect key="frame" x="143.5" y="282" width="48" height="30"/>
+                            <state key="normal" title="Logout"/>
+                            <connections>
+                                <action selector="logoutModalPressed:" destination="-1" eventType="touchUpInside" id="pjf-ec-Cs2"/>
+                            </connections>
+                        </button>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="14" translatesAutoresizingMaskIntoConstraints="NO" id="fCz-OH-qfQ">
+                            <rect key="frame" x="102.5" y="38.5" width="130.5" height="203.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your Profile" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="py7-Uz-kY2">
+                                    <rect key="frame" x="21" y="0.0" width="88" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="smackProfileIcon" translatesAutoresizingMaskIntoConstraints="NO" id="zxz-YJ-IXR" customClass="CircleImage" customModule="Zlack" customModuleProvider="target">
+                                    <rect key="frame" x="15" y="34.5" width="100" height="100"/>
+                                    <constraints>
+                                        <constraint firstAttribute="height" constant="100" id="38h-Io-pNJ"/>
+                                        <constraint firstAttribute="width" constant="100" id="wyH-ba-4UU"/>
+                                    </constraints>
+                                </imageView>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Piteli" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="XPp-AS-9uO">
+                                    <rect key="frame" x="46.5" y="148.5" width="37" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="piteli@gmail.com" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ium-IM-K2Q">
+                                    <rect key="frame" x="0.0" y="183" width="130.5" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <nil key="textColor"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="bottom" secondItem="zFi-2H-Gg1" secondAttribute="bottom" constant="8" id="6hN-Fn-mlg"/>
+                        <constraint firstItem="7cz-hi-MeU" firstAttribute="top" secondItem="4Ho-AM-ntL" secondAttribute="top" constant="8" id="XzE-MW-laA"/>
+                        <constraint firstItem="fCz-OH-qfQ" firstAttribute="centerX" secondItem="4Ho-AM-ntL" secondAttribute="centerX" id="ZB9-Ne-U19"/>
+                        <constraint firstItem="zFi-2H-Gg1" firstAttribute="centerX" secondItem="4Ho-AM-ntL" secondAttribute="centerX" id="ZaX-cw-QE1"/>
+                        <constraint firstAttribute="trailing" secondItem="7cz-hi-MeU" secondAttribute="trailing" constant="8" id="Zrf-9T-Sc2"/>
+                        <constraint firstItem="fCz-OH-qfQ" firstAttribute="centerY" secondItem="4Ho-AM-ntL" secondAttribute="centerY" constant="-20" id="hg2-8I-xxw"/>
+                        <constraint firstAttribute="height" constant="320" id="mQT-D1-NDu"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="4Ho-AM-ntL" secondAttribute="trailing" constant="20" id="VqH-Xi-4QI"/>
+                <constraint firstItem="4Ho-AM-ntL" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="Zkp-Br-HFe"/>
+                <constraint firstItem="fkq-5h-CcJ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="bGP-kH-8AX"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="fkq-5h-CcJ" secondAttribute="trailing" id="fPc-CP-LH7"/>
+                <constraint firstItem="fkq-5h-CcJ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="ndl-4j-1OT"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="fkq-5h-CcJ" secondAttribute="bottom" id="sxn-Qv-LLM"/>
+                <constraint firstItem="4Ho-AM-ntL" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="tkV-vI-NHO"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="55.200000000000003" y="48.125937031484263"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="closeButton" width="28" height="28"/>
+        <image name="smackProfileIcon" width="192" height="192"/>
+    </resources>
+</document>
