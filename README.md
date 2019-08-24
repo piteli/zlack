@@ -3,7 +3,7 @@ aka slack clone - for IOS Mobile App.
 
 This project created for educational purpose.
 
-##TO DO
+## TO DO
 * Chat Modules
 * Push Notification Modules
 * Create Channel
