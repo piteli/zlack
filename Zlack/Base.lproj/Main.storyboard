@@ -95,6 +95,8 @@
                         <viewLayoutGuide key="safeArea" id="fcF-of-q09"/>
                     </view>
                     <connections>
+                        <outlet property="loginBtn" destination="IgA-4c-p1l" id="j2n-ie-fiX"/>
+                        <outlet property="userImg" destination="fOn-Go-5qu" id="W62-47-a56"/>
                         <segue destination="Mk0-Yt-6OT" kind="show" identifier="toLogin" id="4mq-Er-Np2"/>
                     </connections>
                 </viewController>
