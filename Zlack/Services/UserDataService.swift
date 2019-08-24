@@ -19,10 +19,10 @@ import SwiftyJSON
     public private(set) var email = ""
     public private(set) var name = ""
     
-    func setUserData(id : String, color : String, avatarName : String, avatarColor : String, email : String,
+    func setUserData(id : String, color : String, avatarName : String, email : String,
                      name : String){
         self.id = id;
-        self.avatarColor = avatarColor;
+        self.avatarColor = color;
         self.avatarName = avatarName;
         self.email = email;
         self.name = name;
@@ -57,42 +57,6 @@ import SwiftyJSON
         
         let newUIColor = UIColor(red : rFloat, green : gFloat, blue : bFloat, alpha : aFloat)
         return newUIColor
-    }
-    
-    func createUser(name : String, email : String, avatarName : String, avatarColor : String, completion : @escaping CompletionHandler){
-        let lowerCaseEmail = email.lowercased();
-        
-        let body : [String : Any] = [
-        "name" : name,
-        "email" : lowerCaseEmail,
-        "avatarName" : avatarName,
-        "avatarColor" : avatarColor
-        ]
-        
-        let headers = [
-            "Authorization" : "Bearer \(AuthService.instance.authToken)",
-            "Content-Type" : "application/json; charset=utf-8"
-        ]
-        
-        Alamofire.request(URL_USER_ADD, method : .post, parameters : body, encoding : JSONEncoding.default, headers : headers).responseJSON{ (response) in
-            
-            if response.result.error == nil{
-                guard let data = response.data else {return}
-                let json = try! JSON(data : data)
-                let id = json["_id"].stringValue
-                let color = json["avatarColor"].stringValue
-                let avatarName = json["avatarName"].stringValue
-                let email = json["email"].stringValue
-                let name = json["name"].stringValue
-                
-                UserDataService.instance.setUserData(id : id, color : color, avatarName : avatarName, avatarColor: color, email : email, name : name)
-                completion(true)
-            }else{
-                completion(false)
-                debugPrint(response.result.error as Any)
-            }
-            
-        }
     }
     
     func logoutUser(){

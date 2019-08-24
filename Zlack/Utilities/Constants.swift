@@ -14,6 +14,7 @@ let BASE_URL = "https://zlack-api.herokuapp.com/"
 let URL_REGISTER = "\(BASE_URL)account/register"
 let URL_LOGIN = "\(BASE_URL)account/login"
 let URL_USER_ADD = "\(BASE_URL)user/add"
+let URL_USER_BY_EMAIL = "\(BASE_URL)user/byEmail/"
 
 //colors
 let zlackPurplePlaceHolder = #colorLiteral(red: 0.3647058904, green: 0.06666667014, blue: 0.9686274529, alpha: 0.7033450704)
@@ -32,5 +33,10 @@ let TOKEN_KEY = "token"
 let LOGGED_IN_KEY = "loggedIn"
 let USER_EMAIL = "userEmail"
 let HEADER = [
+    "Content-Type" : "application/json; charset=utf-8"
+]
+
+let BEARER_HEADER = [
+    "Authorization" : "Bearer \(AuthService.instance.authToken)",
     "Content-Type" : "application/json; charset=utf-8"
 ]
