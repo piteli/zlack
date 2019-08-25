@@ -9,6 +9,8 @@
 /* Begin PBXBuildFile section */
 		0C676EFC2311332A00AC3F8E /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C676EFA2311332A00AC3F8E /* ProfileVC.swift */; };
 		0C676EFD2311332A00AC3F8E /* ProfileVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0C676EFB2311332A00AC3F8E /* ProfileVC.xib */; };
+		0C676F0023120A6F00AC3F8E /* MessageService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C676EFF23120A6F00AC3F8E /* MessageService.swift */; };
+		0C676F0223120AA200AC3F8E /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C676F0123120AA200AC3F8E /* Channel.swift */; };
 		C13FCCBD30968C8B09E374E4 /* Pods_Zlack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */; };
 		F9025196230915750090FD9D /* AvatarPickerVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9025195230915750090FD9D /* AvatarPickerVC.swift */; };
 		F9025198230918550090FD9D /* AvatarCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F9025197230918550090FD9D /* AvatarCell.swift */; };
@@ -32,6 +34,8 @@
 /* Begin PBXFileReference section */
 		0C676EFA2311332A00AC3F8E /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		0C676EFB2311332A00AC3F8E /* ProfileVC.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ProfileVC.xib; sourceTree = "<group>"; };
+		0C676EFF23120A6F00AC3F8E /* MessageService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageService.swift; sourceTree = "<group>"; };
+		0C676F0123120AA200AC3F8E /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = Zlack/Services/Channel.swift; sourceTree = SOURCE_ROOT; };
 		218D28F794DB22CA5C22AF4D /* Pods-Zlack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zlack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Zlack/Pods-Zlack.release.xcconfig"; sourceTree = "<group>"; };
 		42BAF68D935F54C6EF005C48 /* Pods-Zlack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Zlack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Zlack/Pods-Zlack.debug.xcconfig"; sourceTree = "<group>"; };
 		BD28069BCDA579CC4AF36B2C /* Pods_Zlack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Zlack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +122,7 @@
 			children = (
 				F950B0772303ED1B00267EC7 /* AuthService.swift */,
 				F9641FE82308FC55006FF1DB /* UserDataService.swift */,
+				0C676EFF23120A6F00AC3F8E /* MessageService.swift */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -186,6 +191,7 @@
 		F9C3D92C22F34164004A1532 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				0C676F0123120AA200AC3F8E /* Channel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -315,7 +321,9 @@
 				F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */,
 				F99053822305B5710007CE81 /* RoundedButton.swift in Sources */,
 				F9025196230915750090FD9D /* AvatarPickerVC.swift in Sources */,
+				0C676F0223120AA200AC3F8E /* Channel.swift in Sources */,
 				F9444872230BFA3D00E14063 /* CircleImage.swift in Sources */,
+				0C676F0023120A6F00AC3F8E /* MessageService.swift in Sources */,
 				F9C3D93222F344C5004A1532 /* ChatVC.swift in Sources */,
 				F9641FE92308FC55006FF1DB /* UserDataService.swift in Sources */,
 				F98BA50822F9BC1D00D34C57 /* CreateAccountVC.swift in Sources */,
