@@ -42,7 +42,7 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cellContainer" id="qjV-Op-b7U">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="none" indentationWidth="10" reuseIdentifier="ChannelCell" id="qjV-Op-b7U" customClass="ChannelCell" customModule="Zlack" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="374" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="qjV-Op-b7U" id="Fyb-u5-CXa">
@@ -59,6 +59,9 @@
                                             </subviews>
                                         </tableViewCellContentView>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <connections>
+                                            <outlet property="channelName" destination="DDa-SP-LAJ" id="ZIX-bT-6xT"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -96,6 +99,7 @@
                     </view>
                     <connections>
                         <outlet property="loginBtn" destination="IgA-4c-p1l" id="j2n-ie-fiX"/>
+                        <outlet property="tableView" destination="g0a-E7-Zs1" id="ePf-AW-zgY"/>
                         <outlet property="userImg" destination="fOn-Go-5qu" id="W62-47-a56"/>
                         <segue destination="Mk0-Yt-6OT" kind="show" identifier="toLogin" id="4mq-Er-Np2"/>
                     </connections>
@@ -135,13 +139,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VM3-pF-QkV">
-                                <rect key="frame" x="67" y="311" width="240" height="17"/>
+                                <rect key="frame" x="67" y="311" width="240" height="26"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzu-mR-clu">
-                                <rect key="frame" x="96" y="379" width="183" height="30"/>
+                                <rect key="frame" x="96" y="388" width="183" height="30"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ETG-ZL-XUX"/>
@@ -162,7 +166,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3S-5J-UDo">
-                                <rect key="frame" x="67" y="338" width="240" height="1"/>
+                                <rect key="frame" x="67" y="347" width="240" height="1"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7vV-qT-4rx"/>
@@ -176,7 +180,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Enr-R8-Hx3">
-                                <rect key="frame" x="78.5" y="423" width="218" height="28"/>
+                                <rect key="frame" x="78.5" y="432" width="218" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Don't have a account? Sign up here!"/>
                                 <connections>
@@ -184,7 +188,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Szq-84-Xya">
-                                <rect key="frame" x="162.5" y="254" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="258.5" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3nE-Sk-oeb"/>
                                     <constraint firstAttribute="height" constant="50" id="94A-3P-v39"/>
