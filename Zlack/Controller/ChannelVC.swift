@@ -75,4 +75,10 @@ class ChannelVC: UIViewController, UITableViewDelegate, UITableViewDataSource {
         return MessageService.instance.channels.count
     }
     
+    @IBAction func addChannelPressed(_ sender: Any) {
+        let addChannel = AddChannelVC()
+        AddChannel.modalPresentationStyle = .custom
+        present(addChannel, animated : true, completion : nil)
+    }
+    
 }
