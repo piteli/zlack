@@ -22,6 +22,8 @@ let zlackPurplePlaceHolder = #colorLiteral(red: 0.3647058904, green: 0.066666670
 
 //notification Constant
 let NOTIF_USER_DATA_DID_CHANGE = Notification.Name("notifUserDataChanged")
+let NOTIF_CHANNELS_LOADED = Notification.Name("channelsLoaded")
+let NOTIF_CHANNEL_SELECTED = Notification.Name("channelsSelected")
 
 
 let TO_LOGIN = "toLogin"
