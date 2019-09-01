@@ -142,13 +142,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <textField opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Password" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="VM3-pF-QkV">
-                                <rect key="frame" x="67" y="311" width="240" height="26"/>
+                                <rect key="frame" x="67" y="311" width="240" height="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uzu-mR-clu">
-                                <rect key="frame" x="96" y="388" width="183" height="30"/>
+                                <rect key="frame" x="96" y="379" width="183" height="30"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="ETG-ZL-XUX"/>
@@ -169,7 +169,7 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="p3S-5J-UDo">
-                                <rect key="frame" x="67" y="347" width="240" height="1"/>
+                                <rect key="frame" x="67" y="338" width="240" height="1"/>
                                 <color key="backgroundColor" red="0.35686274509999999" green="0.62352941179999999" blue="0.79607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="7vV-qT-4rx"/>
@@ -183,7 +183,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="Enr-R8-Hx3">
-                                <rect key="frame" x="78.5" y="432" width="218" height="28"/>
+                                <rect key="frame" x="78.5" y="423" width="218" height="28"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                 <state key="normal" title="Don't have a account? Sign up here!"/>
                                 <connections>
@@ -191,7 +191,7 @@
                                 </connections>
                             </button>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Szq-84-Xya">
-                                <rect key="frame" x="162.5" y="258.5" width="50" height="50"/>
+                                <rect key="frame" x="162.5" y="254" width="50" height="50"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="50" id="3nE-Sk-oeb"/>
                                     <constraint firstAttribute="height" constant="50" id="94A-3P-v39"/>
@@ -514,11 +514,32 @@
                                     <constraint firstItem="Pf8-E4-k1e" firstAttribute="top" secondItem="HkJ-aO-Min" secondAttribute="top" constant="39" id="w4v-tT-s7f"/>
                                 </constraints>
                             </view>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Message:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fMn-oN-ANi">
+                                <rect key="frame" x="0.0" y="627" width="375" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="FFG-0N-NVp"/>
+                                </constraints>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hvd-ps-TPh">
+                                <rect key="frame" x="337" y="632" width="30" height="30"/>
+                                <state key="normal" image="send"/>
+                                <connections>
+                                    <action selector="sendMessagePressed:" destination="rTP-SB-aiS" eventType="touchUpInside" id="CD2-ng-u9v"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="eCl-no-FVT" firstAttribute="trailing" secondItem="hvd-ps-TPh" secondAttribute="trailing" constant="8" id="6ht-tm-yE2"/>
                             <constraint firstItem="HkJ-aO-Min" firstAttribute="trailing" secondItem="eCl-no-FVT" secondAttribute="trailing" id="XJ9-UK-YRb"/>
                             <constraint firstItem="HkJ-aO-Min" firstAttribute="top" secondItem="kWe-iD-Pyb" secondAttribute="top" id="eX6-Es-WTQ"/>
+                            <constraint firstItem="fMn-oN-ANi" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" id="hA0-zw-dVX"/>
+                            <constraint firstItem="fMn-oN-ANi" firstAttribute="bottom" secondItem="eCl-no-FVT" secondAttribute="bottom" id="hHW-wW-1Q9"/>
+                            <constraint firstItem="hvd-ps-TPh" firstAttribute="centerY" secondItem="fMn-oN-ANi" secondAttribute="centerY" id="mcf-GT-Ywi"/>
+                            <constraint firstItem="eCl-no-FVT" firstAttribute="trailing" secondItem="fMn-oN-ANi" secondAttribute="trailing" id="xDP-zv-Lta"/>
                             <constraint firstItem="HkJ-aO-Min" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" id="xeh-Rz-PF6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="eCl-no-FVT"/>
@@ -526,6 +547,7 @@
                     <connections>
                         <outlet property="channelNameLbl" destination="kZD-vi-Mdb" id="9YL-3j-1Hy"/>
                         <outlet property="menuBtn" destination="Pf8-E4-k1e" id="zt8-aF-ZUW"/>
+                        <outlet property="messageTxtBox" destination="fMn-oN-ANi" id="i7p-kQ-jil"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhF-Jj-A1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -536,6 +558,7 @@
     <resources>
         <image name="addChannelButton" width="22" height="22"/>
         <image name="closeButton" width="28" height="28"/>
+        <image name="send" width="30" height="30"/>
         <image name="smackBack" width="28" height="28"/>
         <image name="smackBurger" width="40" height="40"/>
         <image name="smackLogo" width="48" height="40"/>
