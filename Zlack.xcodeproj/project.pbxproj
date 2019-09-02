@@ -13,6 +13,7 @@
 		0C676F0223120AA200AC3F8E /* Channel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C676F0123120AA200AC3F8E /* Channel.swift */; };
 		0C676F042313E26900AC3F8E /* ChannelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C676F032313E26900AC3F8E /* ChannelCell.swift */; };
 		0C6A75FF2316D08300BF5731 /* SocketService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C6A75FE2316D08300BF5731 /* SocketService.swift */; };
+		0C866304231CAEC900F95349 /* MessageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0C866303231CAEC900F95349 /* MessageCell.swift */; };
 		0CA4A110231BABF3008660D9 /* KeyboardBoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CA4A10F231BABF3008660D9 /* KeyboardBoundView.swift */; };
 		0CBAEC8F2318DDA00011BA4F /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CBAEC8E2318DDA00011BA4F /* Message.swift */; };
 		0CFA52452314F7E5001353CD /* AddChannelVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0CFA52432314F7E5001353CD /* AddChannelVC.swift */; };
@@ -44,6 +45,7 @@
 		0C676F0123120AA200AC3F8E /* Channel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Channel.swift; path = Zlack/Services/Channel.swift; sourceTree = SOURCE_ROOT; };
 		0C676F032313E26900AC3F8E /* ChannelCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelCell.swift; sourceTree = "<group>"; };
 		0C6A75FE2316D08300BF5731 /* SocketService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SocketService.swift; sourceTree = "<group>"; };
+		0C866303231CAEC900F95349 /* MessageCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageCell.swift; sourceTree = "<group>"; };
 		0CA4A10F231BABF3008660D9 /* KeyboardBoundView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KeyboardBoundView.swift; path = "../../../../../Downloads/Smack Assets/KeyboardBind View/KeyboardBoundView.swift"; sourceTree = "<group>"; };
 		0CBAEC8E2318DDA00011BA4F /* Message.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Message.swift; path = Zlack/Services/Message.swift; sourceTree = SOURCE_ROOT; };
 		0CFA52432314F7E5001353CD /* AddChannelVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddChannelVC.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				F9025197230918550090FD9D /* AvatarCell.swift */,
 				F9444871230BFA3D00E14063 /* CircleImage.swift */,
 				0C676F032313E26900AC3F8E /* ChannelCell.swift */,
+				0C866303231CAEC900F95349 /* MessageCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -342,6 +345,7 @@
 				0C676F042313E26900AC3F8E /* ChannelCell.swift in Sources */,
 				F9C3D93422F344D9004A1532 /* ChannelVC.swift in Sources */,
 				F99053822305B5710007CE81 /* RoundedButton.swift in Sources */,
+				0C866304231CAEC900F95349 /* MessageCell.swift in Sources */,
 				F9025196230915750090FD9D /* AvatarPickerVC.swift in Sources */,
 				0CBAEC8F2318DDA00011BA4F /* Message.swift in Sources */,
 				0C676F0223120AA200AC3F8E /* Channel.swift in Sources */,

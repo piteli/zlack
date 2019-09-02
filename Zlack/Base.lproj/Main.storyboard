@@ -530,6 +530,65 @@
                                     <action selector="sendMessagePressed:" destination="rTP-SB-aiS" eventType="touchUpInside" id="CD2-ng-u9v"/>
                                 </connections>
                             </button>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="yUj-iL-VgC">
+                                <rect key="frame" x="0.0" y="77" width="375" height="520"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="messageCell" rowHeight="80" id="FSR-00-AAd" customClass="MessageCell" customModule="Zlack" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="80"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FSR-00-AAd" id="Tv1-YM-XyX">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="80"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Ncp-2j-4mb" customClass="CircleImage" customModule="Zlack" customModuleProvider="target">
+                                                    <rect key="frame" x="15" y="11" width="61" height="53"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="61" id="dHx-si-yWg"/>
+                                                        <constraint firstAttribute="height" constant="53" id="uwM-qV-tzh"/>
+                                                    </constraints>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="751" text="Fitri" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HOt-YH-Khd">
+                                                    <rect key="frame" x="88" y="11" width="33" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="my message here" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zja-N7-TOq">
+                                                    <rect key="frame" x="84" y="44" width="261" height="13"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="3.00 am" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M0p-d3-jjG">
+                                                    <rect key="frame" x="127" y="11" width="60" height="21"/>
+                                                    <fontDescription key="fontDescription" name="GurmukhiMN" family="Gurmukhi MN" pointSize="17"/>
+                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="zja-N7-TOq" secondAttribute="bottom" constant="12" id="8rV-Ek-Qt3"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="zja-N7-TOq" secondAttribute="trailing" constant="15" id="A9K-2v-P0C"/>
+                                                <constraint firstItem="M0p-d3-jjG" firstAttribute="top" secondItem="HOt-YH-Khd" secondAttribute="top" id="JbB-gQ-UF5"/>
+                                                <constraint firstItem="M0p-d3-jjG" firstAttribute="leading" secondItem="HOt-YH-Khd" secondAttribute="trailing" constant="6" id="K9G-KR-bCo"/>
+                                                <constraint firstItem="Ncp-2j-4mb" firstAttribute="leading" secondItem="Tv1-YM-XyX" secondAttribute="leadingMargin" id="Q58-bY-AiO"/>
+                                                <constraint firstItem="HOt-YH-Khd" firstAttribute="top" secondItem="Ncp-2j-4mb" secondAttribute="top" id="QIt-Sc-JN3"/>
+                                                <constraint firstItem="zja-N7-TOq" firstAttribute="leading" secondItem="Ncp-2j-4mb" secondAttribute="trailing" constant="8" id="WV8-ga-bhl"/>
+                                                <constraint firstItem="Ncp-2j-4mb" firstAttribute="top" secondItem="Tv1-YM-XyX" secondAttribute="topMargin" id="Wpm-fc-RXx"/>
+                                                <constraint firstItem="zja-N7-TOq" firstAttribute="top" secondItem="HOt-YH-Khd" secondAttribute="bottom" constant="12" id="blh-7f-2uP"/>
+                                                <constraint firstItem="HOt-YH-Khd" firstAttribute="leading" secondItem="Ncp-2j-4mb" secondAttribute="trailing" constant="12" id="d2m-mI-c5S"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="CircleImage" destination="Ncp-2j-4mb" id="Rgl-5B-hKe"/>
+                                            <outlet property="messageBodyLbl" destination="zja-N7-TOq" id="nkU-0W-UuA"/>
+                                            <outlet property="timestampLbl" destination="M0p-d3-jjG" id="9Tp-Gt-fh8"/>
+                                            <outlet property="usernameLbl" destination="HOt-YH-Khd" id="QHG-XL-xok"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -538,7 +597,11 @@
                             <constraint firstItem="HkJ-aO-Min" firstAttribute="top" secondItem="kWe-iD-Pyb" secondAttribute="top" id="eX6-Es-WTQ"/>
                             <constraint firstItem="fMn-oN-ANi" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" id="hA0-zw-dVX"/>
                             <constraint firstItem="fMn-oN-ANi" firstAttribute="bottom" secondItem="eCl-no-FVT" secondAttribute="bottom" id="hHW-wW-1Q9"/>
+                            <constraint firstItem="fMn-oN-ANi" firstAttribute="top" secondItem="yUj-iL-VgC" secondAttribute="bottom" constant="30" id="i60-v8-2un"/>
+                            <constraint firstItem="yUj-iL-VgC" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" id="k7y-ia-nbS"/>
                             <constraint firstItem="hvd-ps-TPh" firstAttribute="centerY" secondItem="fMn-oN-ANi" secondAttribute="centerY" id="mcf-GT-Ywi"/>
+                            <constraint firstItem="yUj-iL-VgC" firstAttribute="top" secondItem="HkJ-aO-Min" secondAttribute="bottom" id="qqa-eY-UKp"/>
+                            <constraint firstItem="eCl-no-FVT" firstAttribute="trailing" secondItem="yUj-iL-VgC" secondAttribute="trailing" id="v3G-W7-V7V"/>
                             <constraint firstItem="eCl-no-FVT" firstAttribute="trailing" secondItem="fMn-oN-ANi" secondAttribute="trailing" id="xDP-zv-Lta"/>
                             <constraint firstItem="HkJ-aO-Min" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" id="xeh-Rz-PF6"/>
                         </constraints>
@@ -548,6 +611,7 @@
                         <outlet property="channelNameLbl" destination="kZD-vi-Mdb" id="9YL-3j-1Hy"/>
                         <outlet property="menuBtn" destination="Pf8-E4-k1e" id="zt8-aF-ZUW"/>
                         <outlet property="messageTxtBox" destination="fMn-oN-ANi" id="i7p-kQ-jil"/>
+                        <outlet property="tableView" destination="yUj-iL-VgC" id="ySP-6M-bDL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhF-Jj-A1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
