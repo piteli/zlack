@@ -592,10 +592,18 @@
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb3-n8-Qc2">
+                                <rect key="frame" x="8" y="623" width="0.0" height="0.0"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="fMn-oN-ANi" firstAttribute="top" secondItem="qb3-n8-Qc2" secondAttribute="bottom" constant="4" id="5eo-sj-JrB"/>
                             <constraint firstItem="eCl-no-FVT" firstAttribute="trailing" secondItem="hvd-ps-TPh" secondAttribute="trailing" constant="8" id="6ht-tm-yE2"/>
+                            <constraint firstItem="qb3-n8-Qc2" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" constant="8" id="GT3-uo-sXH"/>
                             <constraint firstItem="HkJ-aO-Min" firstAttribute="trailing" secondItem="eCl-no-FVT" secondAttribute="trailing" id="XJ9-UK-YRb"/>
                             <constraint firstItem="HkJ-aO-Min" firstAttribute="top" secondItem="kWe-iD-Pyb" secondAttribute="top" id="eX6-Es-WTQ"/>
                             <constraint firstItem="fMn-oN-ANi" firstAttribute="leading" secondItem="eCl-no-FVT" secondAttribute="leading" id="hA0-zw-dVX"/>
@@ -616,6 +624,7 @@
                         <outlet property="messageTxtBox" destination="fMn-oN-ANi" id="i7p-kQ-jil"/>
                         <outlet property="sendBtn" destination="hvd-ps-TPh" id="zKo-00-ez7"/>
                         <outlet property="tableView" destination="yUj-iL-VgC" id="ySP-6M-bDL"/>
+                        <outlet property="typingUserLbl" destination="qb3-n8-Qc2" id="Fmk-SX-yij"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rhF-Jj-A1c" userLabel="First Responder" sceneMemberID="firstResponder"/>
